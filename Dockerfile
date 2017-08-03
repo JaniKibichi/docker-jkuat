@@ -1,6 +1,6 @@
 #start with a base image
 FROM ubuntu:14.04
-RUN apt-get update && apt-get upgrade
+RUN apt-get update && apt-get -y upgrade
 #install openjdk
 RUN apt-get -y install openjdk-8-jre && \
     apt-get -y install openjdk-8-jdk && \
