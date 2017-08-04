@@ -1,6 +1,8 @@
 #start with a base image
 FROM ubuntu:14.04
-RUN apt-get update && apt-get -y upgrade && apt-get -y install default-jre && apt-get -y install default-jdk
+RUN apt-get update && apt-get -y upgrade && \
+apt-get -y install default-jre && apt-get -y install default-jdk && \
+apt-get -y install curl
 #set up git & sbt
 RUN curl -L -o sbt-0.13.15.deb https://dl.bintray.com/sbt/debian/sbt-0.13.15.deb && \
   dpkg -i sbt-0.13.15.deb && \
