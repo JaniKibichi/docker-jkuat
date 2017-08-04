@@ -11,7 +11,7 @@ public class SMS
 			String username = "jkuat";
 			String apiKey   = "30e34507d42910e827b2ed32c6ffe53019f42feacf1a7e905c753196dd4454bd";
 
-            String recipients = "+254708415904,+254729698969,+254702663386";
+            String recipients = "+254708415904,+254729698969,+254702663386,+254726304245,+254723681738,+254707305133";
 
 			String message = "We are lumberjacks. We code all day and sleep all night";
 

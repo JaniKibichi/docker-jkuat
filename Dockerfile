@@ -14,6 +14,7 @@ RUN curl -L -o sbt-0.13.15.deb https://dl.bintray.com/sbt/debian/sbt-0.13.15.deb
 RUN mkdir ussd/
 WORKDIR ussd/
 COPY . ussd/
-RUN wget -O AfricasTalkingGateway.java http://docs.africastalking.com/smslibraries/java 
+RUN wget -O AfricasTalkingGateway.java http://docs.africastalking.com/smslibraries/java && \
+    mv AfricasTalkingGateway.java ussd/ && cd ussd
 CMD ["sbt","run"]
 
