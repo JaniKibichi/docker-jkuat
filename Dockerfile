@@ -10,10 +10,10 @@ RUN curl -L -o sbt-0.13.15.deb https://dl.bintray.com/sbt/debian/sbt-0.13.15.deb
   dpkg -i sbt-0.13.15.deb && \
   rm sbt-0.13.15.deb && \
   apt-get update && apt-get -y install git && apt-get install wget 
-#install framework
+#install framework & wget AT Gateway
 RUN mkdir ussd/
 WORKDIR ussd/
 COPY . ussd/
-RUN cd ussd/ && sbt 
+RUN wget -O AfricasTalkingGateway.java http://docs.africastalking.com/smslibraries/java 
 CMD ["sbt","run"]
 
