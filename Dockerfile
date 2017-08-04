@@ -2,7 +2,11 @@
 FROM ubuntu:14.04
 RUN apt-get update && apt-get -y upgrade && apt-get -y install default-jre && apt-get -y install default-jdk
 #set up git & sbt
-RUN apt-get -y install git && apt-get -y install sbt 
+RUN curl -L -o sbt-0.13.15.deb https://dl.bintray.com/sbt/debian/sbt-0.13.15.deb && \
+  dpkg -i sbt-0.13.15.deb && \
+  rm sbt-0.13.15.deb && \
+  apt-get update && \
+  apt-get -y install sbt && \ apt-get -y install git 
 #install framework
 RUN mkdir ussd/
 WORKDIR ussd/
