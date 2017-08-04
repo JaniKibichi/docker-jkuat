@@ -1,5 +1,6 @@
 #start with a base image
 FROM ubuntu:14.04
+#install java
 RUN apt-get update && apt-get -y upgrade && apt-get -y install software-properties-common && \
 apt-get -y install default-jre && apt-get -y install default-jdk && \
 apt-get -y install curl && add-apt-repository ppa:openjdk-r/ppa && \
